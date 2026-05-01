@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Yareliza — bientôt</title>
-    <meta name="description" content="Yareliza arrive bientôt. Inscrivez-vous pour être averti du lancement." />
+    <title>Yareliza — coming soon</title>
+    <meta name="description" content="Yareliza is coming soon. Sign up to be notified at launch." />
     <meta name="theme-color" content="#0a0708" />
 
     <link rel="canonical" href="https://iamyareliza.com/" />
     <meta property="og:title" content="Yareliza" />
-    <meta property="og:description" content="Bientôt." />
+    <meta property="og:description" content="Coming soon." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://iamyareliza.com/" />
     <meta property="og:image" content="https://iamyareliza.com/assets/photo.jpg" />
@@ -30,41 +30,40 @@
   </head>
   <body>
     <div class="bg" aria-hidden="true"></div>
-    <div class="overlay" aria-hidden="true"></div>
 
     <main class="stage">
       <article class="card">
         <h1 class="brand">Yareliza</h1>
-        <p class="tagline"><em>Bientôt.</em></p>
-        <p class="lede">Quelque chose se prépare. Laissez votre email pour être averti·e du lancement.</p>
+        <p class="tagline"><em>Coming soon.</em></p>
+        <p class="lede">Something is on its way. Drop your email to be notified at launch.</p>
 
         <!--
-          Form: par défaut utilise mailto: (ouvre le client mail).
-          Pour brancher un vrai backend de capture email plus tard, remplacer
-          l'attribut action par une URL Formspree (https://formspree.io/f/XXXXX)
-          ou un endpoint Mailchimp / ConvertKit.
+          Form: defaults to mailto: (opens the user's mail client).
+          To connect a real email-capture backend later, swap the action
+          attribute with a Formspree URL (https://formspree.io/f/XXXXX),
+          a Mailchimp embed, or any equivalent endpoint.
         -->
         <form class="signup" action="mailto:contact@iamyareliza.com" method="post" enctype="text/plain" novalidate>
-          <label class="visually-hidden" for="email">Adresse email</label>
+          <label class="visually-hidden" for="email">Email address</label>
           <input
             id="email"
             name="email"
             type="email"
             required
             autocomplete="email"
-            placeholder="votre@email.com"
+            placeholder="your@email.com"
             spellcheck="false"
           />
-          <button type="submit">M'avertir</button>
+          <button type="submit">Notify me</button>
         </form>
 
         <p class="success" role="status" aria-live="polite" hidden>
-          Merci. On vous tient au courant.
+          Thank you. We'll keep you posted.
         </p>
       </article>
     </main>
 
-    <nav class="social-banner" aria-label="Réseaux sociaux">
+    <nav class="social-banner" aria-label="Social media">
       <a href="https://instagram.com/iamyareliza" rel="noopener" target="_blank">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="3" y="3" width="18" height="18" rx="5" />

@@ -24,9 +24,9 @@
     const mailto = form.getAttribute("action");
     if (mailto && mailto.startsWith("mailto:")) {
       const url = `${mailto}?subject=${encodeURIComponent(
-        "Inscription Yareliza",
+        "Yareliza signup",
       )}&body=${encodeURIComponent(
-        `Bonjour,\n\nJe souhaite être averti·e du lancement de Yareliza.\n\nEmail : ${input.value}\n`,
+        `Hi,\n\nI'd like to be notified of Yareliza's launch.\n\nEmail: ${input.value}\n`,
       )}`;
       window.location.href = url;
     }
