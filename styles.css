@@ -140,6 +140,18 @@ body {
   font-size: 14px;
 }
 
+.social-banner .handle .tag {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-style: normal;
+  font-family: var(--sans);
+  letter-spacing: 0.06em;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
 @media (min-width: 720px) {
   .social-banner .handle {
     display: inline;
