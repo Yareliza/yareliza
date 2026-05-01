@@ -17,7 +17,18 @@
     <meta name="twitter:site" content="@iamyareliza" />
 
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-    <link rel="preload" as="image" href="assets/photo.jpg" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/photo.jpg"
+      media="(min-aspect-ratio: 1/1)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/photo-mobile.jpg"
+      media="(max-aspect-ratio: 1/1)"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,11 +42,7 @@
   <body>
     <div class="bg" aria-hidden="true"></div>
 
-    <main class="stage">
-      <article class="card">
-        <h1 class="brand">Yareliza</h1>
-      </article>
-    </main>
+    <h1 class="visually-hidden">Yareliza</h1>
 
     <nav class="social-banner" aria-label="Social media">
       <a href="https://instagram.com/iamyareliza" rel="noopener" target="_blank">
