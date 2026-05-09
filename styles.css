@@ -99,26 +99,10 @@ body {
 
 .video {
   position: fixed;
-  top: clamp(20px, 4vh, 40px);
-  right: clamp(20px, 3vw, 40px);
+  bottom: calc(var(--banner-h) + clamp(20px, 4vh, 40px));
+  right: clamp(20px, 3vw, 48px);
   z-index: 6;
-  width: min(420px, calc(100vw - 32px));
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 14px;
-}
-
-.video-title {
-  margin: 0;
-  text-align: right;
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: clamp(36px, 4.4vw, 52px);
-  letter-spacing: -0.025em;
-  line-height: 1;
-  color: var(--ink);
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.55);
+  width: min(620px, calc(100vw - 32px));
 }
 
 .video-frame {
@@ -164,11 +148,8 @@ body {
 @media (max-width: 540px) {
   .video {
     width: calc(100vw - 24px);
-    top: 16px;
     right: 12px;
-  }
-  .video-title {
-    text-align: center;
+    bottom: calc(var(--banner-h) + 16px);
   }
 }
 
