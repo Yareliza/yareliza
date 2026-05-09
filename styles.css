@@ -99,8 +99,9 @@ body {
 
 .video {
   position: fixed;
-  bottom: calc(var(--banner-h) + clamp(20px, 4vh, 40px));
+  top: 50%;
   right: clamp(20px, 3vw, 48px);
+  transform: translateY(-50%);
   z-index: 6;
   width: min(620px, calc(100vw - 32px));
 }
@@ -149,7 +150,9 @@ body {
   .video {
     width: calc(100vw - 24px);
     right: 12px;
+    top: auto;
     bottom: calc(var(--banner-h) + 16px);
+    transform: none;
   }
 }
 
