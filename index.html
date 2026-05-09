@@ -56,9 +56,33 @@
 
     <h1 class="visually-hidden">Yareliza</h1>
 
-    <audio id="bgm" src="assets/yareliza.mp3" loop preload="metadata"></audio>
+    <!-- YouTube video slot (drop iframe inside .video-frame when URL is ready) -->
+    <section class="video" aria-label="Featured video">
+      <div class="video-frame">
+        <!--
+          When you have the YouTube ID (the part after v= in the URL), replace
+          the placeholder below with:
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/YOUTUBE_ID?rel=0&modestbranding=1"
+            title="Yareliza video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        -->
+        <div class="video-placeholder" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
+            <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15V9l5.2 3L10 15Z" />
+          </svg>
+          <span>Video coming soon</span>
+        </div>
+      </div>
+    </section>
 
-    <section class="player" aria-label="Music player">
+    <audio id="bgm" src="assets/yareliza.mp3" loop preload="metadata" hidden></audio>
+
+    <section class="player" aria-label="Music player" hidden>
       <button
         type="button"
         id="audio-toggle"
