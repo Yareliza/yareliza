@@ -33,10 +33,16 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+html,
 body {
-  min-height: 100dvh;
+  height: 100dvh;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body {
   position: relative;
-  overflow-x: hidden;
+  touch-action: pan-x pan-y pinch-zoom;
 }
 
 .bg {
