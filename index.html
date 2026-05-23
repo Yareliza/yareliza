@@ -56,6 +56,63 @@
 
     <h1 class="visually-hidden">Yareliza — Hallelujah</h1>
 
+    <button
+      type="button"
+      class="about-trigger"
+      id="about-trigger"
+      aria-controls="about-modal"
+      aria-expanded="false"
+    >
+      About
+    </button>
+
+    <div class="about-modal" id="about-modal" hidden>
+      <div class="about-backdrop" data-close aria-hidden="true"></div>
+      <article class="about-stage" role="dialog" aria-modal="true" aria-labelledby="about-title">
+        <header class="about-head">
+          <h2 id="about-title" class="visually-hidden">About Yareliza</h2>
+          <div class="about-langs" role="tablist" aria-label="Language">
+            <button type="button" class="about-lang is-active" data-lang="en" role="tab" aria-selected="true">EN</button>
+            <button type="button" class="about-lang" data-lang="es" role="tab" aria-selected="false">ES</button>
+          </div>
+          <button class="about-close" type="button" data-close aria-label="Close">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+              <line x1="6" y1="6" x2="18" y2="18" />
+              <line x1="6" y1="18" x2="18" y2="6" />
+            </svg>
+          </button>
+        </header>
+
+        <div class="about-body">
+          <div class="about-text" data-lang="en" lang="en">
+            <p>My name is Yarelis Cristina Peña Almonte.</p>
+            <p>My grandmother Mercedes was the only one who called me Yareliza.<br />Today I carry that name on stage, in her honor.</p>
+            <p>She gave me my first turquoise notebook when I was eleven, with one rule: <em>"the words come first, mija. the voice comes after."</em> She was right. I filled nine notebooks before I ever sang a single note.</p>
+            <p>When she passed in 2025, I decided to sing.</p>
+            <p>I was born in Santiago and raised in Tamboril. I left the Dominican Republic at three years old and grew up in Washington Heights, between two countries, two languages.</p>
+            <p>Today I make alternative rap and R&amp;B in spanglish.<br />It's not radio american/latin pop.</p>
+            <p><strong>It's who I am.</strong></p>
+            <p>This album lived quietly in my notebooks.<br />Now I'm turning it into my debut album.</p>
+            <p>The one she'll never hear, but the one she made possible.</p>
+            <p class="about-sign"><em>Four names. One voice.</em></p>
+          </div>
+
+          <div class="about-text" data-lang="es" lang="es" hidden>
+            <p>Me llamo Yarelis Cristina Peña Almonte.</p>
+            <p>Mi abuela Mercedes fue la única que me llamaba Yareliza.<br />Hoy llevo ese nombre en el escenario, en su honor.</p>
+            <p>Me regaló mi primera libreta turquesa cuando tenía once años, con una sola regla: <em>"las palabras primero, mija. la voz viene después."</em> Tenía razón. Llené nueve libretas antes de cantar una sola nota.</p>
+            <p>Cuando ella se fue en 2025, decidí cantar.</p>
+            <p>Nací en Santiago y me crié en Tamboril. Salí de la República Dominicana a los tres años y crecí en Washington Heights, entre dos países, dos idiomas.</p>
+            <p>Hoy hago rap alternativo y R&amp;B en spanglish.<br />No es pop americano ni latino de radio.</p>
+            <p><strong>Es quien soy.</strong></p>
+            <p>Este álbum vivió en silencio en mis libretas.<br />Ahora lo estoy convirtiendo en mi álbum debut.</p>
+            <p>El que ella nunca podrá escuchar, pero el que ella hizo posible.</p>
+            <p class="about-sign"><em>Cuatro nombres. Una voz.</em></p>
+          </div>
+        </div>
+      </article>
+    </div>
+
     <section class="video" aria-label="Yareliza — Hallelujah">
       <div class="video-frame">
         <iframe
