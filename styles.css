@@ -103,10 +103,9 @@ body {
   border: 0;
 }
 
-.about-trigger {
+.about-trigger,
+.subscribe-trigger {
   position: fixed;
-  top: clamp(18px, 3vh, 28px);
-  left: clamp(18px, 3vw, 28px);
   z-index: 6;
   padding: 8px 16px;
   border: 1px solid var(--line);
@@ -119,7 +118,43 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 180ms ease, transform 180ms ease;
+  transition: background 180ms ease, transform 180ms ease, color 180ms ease;
+}
+
+.about-trigger {
+  top: clamp(18px, 3vh, 28px);
+  left: clamp(18px, 3vw, 28px);
+}
+
+.subscribe-trigger {
+  bottom: calc(var(--banner-h) + clamp(20px, 4vh, 28px));
+  left: clamp(18px, 3vw, 28px);
+  background: var(--ink);
+  color: var(--accent-ink);
+  border-color: var(--ink);
+  font-weight: 600;
+  padding: 10px 20px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+.subscribe-trigger:hover {
+  background: #fff;
+  border-color: #fff;
+}
+
+.subscribe-trigger:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 540px) {
+  .subscribe-trigger {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: calc(var(--banner-h) + clamp(70px, 12vh, 90px));
+  }
+  .subscribe-trigger:active {
+    transform: translateX(-50%) scale(0.97);
+  }
 }
 
 .about-trigger:hover {
@@ -130,9 +165,200 @@ body {
   transform: scale(0.97);
 }
 
-.about-trigger:focus-visible {
+.about-trigger:focus-visible,
+.subscribe-trigger:focus-visible {
   outline: 1px solid var(--ink);
   outline-offset: 4px;
+}
+
+/* Subscribe modal — shares the visual language of the About modal */
+
+.subscribe-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: about-in 240ms ease;
+}
+
+.subscribe-modal[hidden] {
+  display: none;
+}
+
+.subscribe-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.86);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.subscribe-stage {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: rgba(20, 14, 16, 0.94);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  padding: 36px 28px 30px;
+  text-align: center;
+}
+
+.subscribe-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: var(--ink-soft);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.subscribe-close:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ink);
+}
+
+.subscribe-title {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(26px, 5vw, 32px);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--ink);
+}
+
+.subscribe-sub {
+  margin: 8px 0 24px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  background: rgba(10, 7, 8, 0.6);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.subscribe-form:focus-within {
+  border-color: rgba(246, 239, 228, 0.5);
+  box-shadow: 0 0 0 4px rgba(246, 239, 228, 0.06);
+}
+
+.subscribe-form input[type="email"] {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  padding: 10px 14px;
+  font: 400 14px/1 var(--sans);
+  color: var(--ink);
+  outline: none;
+}
+
+.subscribe-form input[type="email"]::placeholder {
+  color: var(--ink-faint);
+}
+
+.subscribe-form button {
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--accent-ink);
+  padding: 10px 18px;
+  font: 600 12px/1 var(--sans);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 150ms ease, opacity 150ms ease, transform 150ms ease;
+}
+
+.subscribe-form button:hover {
+  background: #fff;
+}
+
+.subscribe-form button:active {
+  transform: scale(0.97);
+}
+
+.subscribe-form button[disabled] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.subscribe-error {
+  margin: 14px 0 0;
+  color: #ff8a80;
+  font-size: 13px;
+}
+
+.subscribe-error[hidden] {
+  display: none;
+}
+
+.subscribe-success[hidden] {
+  display: none;
+}
+
+.subscribe-check {
+  margin: 4px auto 14px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(246, 239, 228, 0.1);
+  border: 1px solid rgba(246, 239, 228, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+}
+
+.subscribe-success-title {
+  margin: 0 0 6px;
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--ink);
+}
+
+.subscribe-success-sub {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+
+@media (max-width: 540px) {
+  .subscribe-form {
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 8px;
+  }
+  .subscribe-form input[type="email"] {
+    text-align: center;
+    padding: 14px;
+  }
+  .subscribe-form button {
+    padding: 14px;
+    border-radius: 12px;
+  }
 }
 
 .about-modal {

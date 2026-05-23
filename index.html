@@ -66,6 +66,59 @@
       About
     </button>
 
+    <button
+      type="button"
+      class="subscribe-trigger"
+      id="subscribe-trigger"
+      aria-controls="subscribe-modal"
+      aria-expanded="false"
+    >
+      Get notified
+    </button>
+
+    <div class="subscribe-modal" id="subscribe-modal" hidden>
+      <div class="subscribe-backdrop" data-close aria-hidden="true"></div>
+      <div class="subscribe-stage" role="dialog" aria-modal="true" aria-labelledby="subscribe-title">
+        <button class="subscribe-close" type="button" data-close aria-label="Close">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+            <line x1="6" y1="6" x2="18" y2="18" />
+            <line x1="6" y1="18" x2="18" y2="6" />
+          </svg>
+        </button>
+
+        <div class="subscribe-content" id="subscribe-form-view">
+          <h2 class="subscribe-title" id="subscribe-title">Be the first to know</h2>
+          <p class="subscribe-sub" id="subscribe-sub">when the album drops</p>
+
+          <form class="subscribe-form" id="subscribe-form" novalidate>
+            <label class="visually-hidden" for="subscribe-email" id="subscribe-label">Email address</label>
+            <input
+              type="email"
+              id="subscribe-email"
+              name="email"
+              required
+              autocomplete="email"
+              placeholder="your@email.com"
+              spellcheck="false"
+            />
+            <button type="submit" id="subscribe-submit">Notify me</button>
+          </form>
+
+          <p class="subscribe-error" id="subscribe-error" role="alert" hidden></p>
+        </div>
+
+        <div class="subscribe-success" id="subscribe-success-view" hidden>
+          <div class="subscribe-check" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <p class="subscribe-success-title" id="subscribe-success-title">You're on the list</p>
+          <p class="subscribe-success-sub" id="subscribe-success-sub">We'll email you when the album drops.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="about-modal" id="about-modal" hidden>
       <div class="about-backdrop" data-close aria-hidden="true"></div>
       <article class="about-stage" role="dialog" aria-modal="true" aria-labelledby="about-title">
