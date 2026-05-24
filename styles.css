@@ -805,6 +805,30 @@ body {
   }
 }
 
+.operator {
+  position: fixed;
+  bottom: var(--banner-h);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  margin: 0;
+  padding: 6px 14px;
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (max-width: 420px) {
+  .operator {
+    font-size: 9px;
+    padding: 4px 10px;
+    letter-spacing: 0.02em;
+  }
+}
+
 .social-banner {
   position: fixed;
   inset: auto 0 0 0;
