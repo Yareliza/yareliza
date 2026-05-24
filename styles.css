@@ -8,6 +8,7 @@
   --serif: "Fraunces", "Cormorant Garamond", ui-serif, Georgia, serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   --banner-h: 64px;
+  --operator-h: 24px;
 }
 
 *,
@@ -127,7 +128,7 @@ body {
 }
 
 .subscribe-trigger {
-  bottom: calc(var(--banner-h) + clamp(20px, 4vh, 28px));
+  bottom: calc(var(--banner-h) + var(--operator-h) + clamp(20px, 4vh, 28px));
   left: clamp(18px, 3vw, 28px);
   background: var(--ink);
   color: var(--accent-ink);
@@ -150,7 +151,7 @@ body {
   .subscribe-trigger {
     left: 50%;
     transform: translateX(-50%);
-    bottom: calc(var(--banner-h) + clamp(70px, 12vh, 90px));
+    bottom: calc(var(--banner-h) + var(--operator-h) + clamp(70px, 12vh, 90px));
   }
   .subscribe-trigger:active {
     transform: translateX(-50%) scale(0.97);
@@ -579,7 +580,7 @@ body {
     display: inline-flex;
     position: fixed;
     left: 50%;
-    bottom: calc(var(--banner-h) + 24px);
+    bottom: calc(var(--banner-h) + var(--operator-h) + 24px);
     transform: translateX(-50%);
     z-index: 6;
     align-items: center;
@@ -807,10 +808,10 @@ body {
 
 .operator {
   position: fixed;
-  bottom: var(--banner-h);
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 4;
+  z-index: 6;
   margin: 0;
   padding: 6px 14px;
   font-family: var(--sans);
@@ -831,7 +832,7 @@ body {
 
 .social-banner {
   position: fixed;
-  inset: auto 0 0 0;
+  inset: auto 0 var(--operator-h) 0;
   z-index: 5;
   height: var(--banner-h);
   display: flex;
