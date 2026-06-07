@@ -575,6 +575,24 @@ body {
   cursor: pointer;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
   transition: background 180ms ease, transform 180ms ease;
+  animation: support-bounce 2.6s ease-in-out infinite;
+}
+
+@keyframes support-bounce {
+  0%, 55%, 100% { transform: translateY(0); }
+  65% { transform: translateY(-9px); }
+  76% { transform: translateY(-4px); }
+  86% { transform: translateY(-2px); }
+}
+
+.about-support:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-support {
+    animation: none;
+  }
 }
 
 .about-support svg { flex: none; }
