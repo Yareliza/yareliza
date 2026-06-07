@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <title>Support Yareliza</title>
+    <meta name="description" content="Support Yareliza's debut album. Every contribution helps turn the notebooks into music." />
+    <meta name="theme-color" content="#0a0708" />
+
+    <link rel="canonical" href="https://iamyareliza.com/support" />
+    <meta property="og:title" content="Support Yareliza" />
+    <meta property="og:description" content="Help bring the debut album to life." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://iamyareliza.com/support" />
+    <meta property="og:image" content="https://iamyareliza.com/assets/photo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@iamyareliza" />
+
+    <link rel="icon" href="/assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WBVK38CE13"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WBVK38CE13');
+    </script>
+
+    <style>
+      :root {
+        --ink: #f6efe4;
+        --ink-soft: rgba(246, 239, 228, 0.72);
+        --ink-faint: rgba(246, 239, 228, 0.5);
+        --line: rgba(246, 239, 228, 0.18);
+        --accent-ink: #0a0708;
+        --serif: "Fraunces", "Cormorant Garamond", ui-serif, Georgia, serif;
+        --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after { box-sizing: border-box; }
+
+      html, body { margin: 0; padding: 0; }
+
+      html {
+        background: #0a0708;
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+
+      body {
+        position: relative;
+        min-height: 100dvh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(24px, 6vh, 56px) clamp(20px, 5vw, 40px);
+      }
+
+      .bg {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-color: #0a0708;
+        background-image: url("/assets/photo.jpg");
+        background-size: cover;
+        background-position: center 30%;
+        background-repeat: no-repeat;
+        animation: kenburns 28s ease-in-out infinite alternate;
+      }
+
+      @media (max-aspect-ratio: 1/1) {
+        .bg {
+          background-image: url("/assets/photo-mobile.jpg");
+          background-position: center;
+        }
+      }
+
+      .tint {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(ellipse at 50% 40%, rgba(10, 7, 8, 0.35) 0%, rgba(10, 7, 8, 0.55) 70%, rgba(10, 7, 8, 0.72) 100%),
+          linear-gradient(180deg, rgba(10, 7, 8, 0.4) 0%, rgba(10, 7, 8, 0.25) 40%, rgba(10, 7, 8, 0.55) 100%);
+      }
+
+      @keyframes kenburns {
+        from { transform: scale(1); }
+        to { transform: scale(1.06); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .bg { animation: none; }
+      }
+
+      .card {
+        position: relative;
+        z-index: 1;
+        width: min(440px, 100%);
+        text-align: center;
+        background: rgba(10, 7, 8, 0.4);
+        -webkit-backdrop-filter: blur(16px) saturate(140%);
+        backdrop-filter: blur(16px) saturate(140%);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: clamp(30px, 5vh, 46px) clamp(24px, 5vw, 38px);
+        box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.8);
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        font: 600 11px/1 var(--sans);
+        letter-spacing: 0.26em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+      }
+
+      .title {
+        margin: 0 0 16px;
+        font-family: var(--serif);
+        font-weight: 400;
+        font-size: clamp(30px, 7vw, 42px);
+        line-height: 1.08;
+        letter-spacing: -0.01em;
+      }
+
+      .lede {
+        margin: 0 auto 8px;
+        max-width: 34ch;
+        color: var(--ink-soft);
+        font-size: 15px;
+      }
+
+      .lede.es {
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+        font-style: italic;
+        color: var(--ink-faint);
+        font-size: 14px;
+      }
+
+      .support-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 28px;
+        padding: 15px 30px;
+        border-radius: 999px;
+        background: var(--ink);
+        color: var(--accent-ink);
+        border: 1px solid var(--ink);
+        font: 600 12px/1 var(--sans);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 0 14px 38px -12px rgba(0, 0, 0, 0.7);
+        transition: background 180ms ease, transform 180ms ease;
+      }
+
+      .support-btn:hover { background: #fff; border-color: #fff; }
+      .support-btn:active { transform: scale(0.97); }
+      .support-btn:focus-visible { outline: 1px solid var(--ink); outline-offset: 4px; }
+
+      .support-btn svg { flex: none; }
+
+      .secure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin: 18px 0 0;
+        font-size: 11.5px;
+        letter-spacing: 0.04em;
+        color: var(--ink-faint);
+      }
+
+      .secure svg {
+        flex: none;
+        opacity: 0.85;
+      }
+
+      .back {
+        display: inline-block;
+        margin-top: 26px;
+        color: var(--ink-soft);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: border-color 180ms ease, color 180ms ease;
+      }
+
+      .back:hover { color: var(--ink); border-bottom-color: var(--line); }
+
+      .operator {
+        position: fixed;
+        bottom: clamp(14px, 3vh, 22px);
+        left: 0;
+        right: 0;
+        z-index: 1;
+        text-align: center;
+        color: var(--ink-faint);
+        font-size: 10.5px;
+        letter-spacing: 0.04em;
+        padding: 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true"></div>
+    <div class="tint" aria-hidden="true"></div>
+
+    <main class="card">
+      <p class="eyebrow">Support</p>
+      <h1 class="title">Help bring the album to life</h1>
+      <p class="lede">
+        This debut album lived quietly in nine notebooks. Your support turns those
+        words into music. Every contribution moves it closer to release.
+      </p>
+      <p class="lede es" lang="es">
+        Tu apoyo convierte esas palabras en música. Gracias por ser parte.
+      </p>
+
+      <a
+        class="support-btn"
+        href="https://buy.stripe.com/00w6oH71Y6WafandOh3Ru01"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </svg>
+        <span>Support Yareliza</span>
+      </a>
+
+      <p class="secure">
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="5" y="11" width="14" height="9" rx="2" />
+          <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+        </svg>
+        <span>Secure payment via Stripe</span>
+      </p>
+
+      <a class="back" href="/">← Back to iamyareliza.com</a>
+    </main>
+
+    <small class="operator">Yareliza (@iamyareliza) is operated by 321 elevation LLC.</small>
+  </body>
+</html>
